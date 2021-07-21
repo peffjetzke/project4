@@ -23,15 +23,19 @@ function handleSubmit(event) {
         })
         .then(res => res.json()) 
         .then(function(res) { //call UpdateUI here, I think. Should reference Proj 3
-            console.log(res.message);
-            document.getElementById('results').innerHTML = res.message
+            console.log(res.agreement);
+            document.getElementById('model').innerHTML = "Model: " + res.model;
+            document.getElementById('subjectivity').innerHTML = "Subjectivity: " + res.subjectivity;
+            document.getElementById('agreement').innerHTML = "Agreement: " + res.agreement;
+            document.getElementById('confidence').innerHTML = "Confidence: " + res.confidence;
+            document.getElementById('irony').innerHTML = "Irony: " + res.irony;
+            document.getElementById('score').innerHTML = "Score: " + res.score_tag;
         })
     }else{
         console.log("URL IS BAD! TRY AGAIN!");
     }
     
 }
-
 
 /*Update UI*/
 //seperate method for updating UI
