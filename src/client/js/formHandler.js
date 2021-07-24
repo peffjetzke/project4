@@ -32,6 +32,7 @@ function handleSubmit(event) {
             document.getElementById('score').innerHTML = "Score: " + res.score_tag;
         })
     }else{
+        alert("Please enter a valid URL and try again!");
         console.log("URL IS BAD! TRY AGAIN!");
     }
     

@@ -1,3 +1,7 @@
+/*Split terminal
+npm start to start server
+npm run build-dev to start webpack*/
+
 /*Bring in the packages */
 const dotenv = require('dotenv');
 var path = require('path');
@@ -5,15 +9,17 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const fetch = require("node-fetch");
+
 /*So we can use the API key stored in the .ENV*/
 dotenv.config();
 
 // const mockAPIResponse = require('./mockAPI.js')
 
 /*Setup the app*/
-app.use(express.static('dist'))
+app.use(express.static("dist"));
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json);
+app.use(bodyParser.json());
 app.use(cors());
 
 /*Variables*/
@@ -24,7 +30,7 @@ let fullURL = meaningURL+"?key="+API_Key+"&lang="+language+"&url=";
 let formInput; //User input from the form
 
 console.log(__dirname)
-console.log("Check URL key:", fullURL); //doesn't work?
+console.log("Check URL key:", fullURL);
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
