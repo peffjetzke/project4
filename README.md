@@ -22,5 +22,7 @@ This project was much more difficult than the those previous. Due to its relianc
 ### Attributions
 
 [Webpack/SCSS versioning issues](https://knowledge.udacity.com/questions/646945)
+
 [Fetch Skip issue](https://knowledge.udacity.com/questions/643436)
+
 [RegEx Validation](https://knowledge.udacity.com/questions/386759) from Dinanath P
